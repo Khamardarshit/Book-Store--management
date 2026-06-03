@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Book Details</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: #f5f5f5;
+            padding: 50px;
+        }
+
+        .container{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left img{
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .right{
+            max-width: 500px;
+        }
+
+        .right h1{
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+
+        .right p{
+            margin-bottom: 15px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        .back-btn{
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #222;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 6px;
+        }
+        h1{
+            text-align: center;
+            font-weight:400;
+            margin-bottom: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>
+        BOOK DETAILS
+    </h1>
+    <div class="container">
+
+        <div class="left">
+            <img src="<%= singleBook.coverImage %>">
+        </div>
+
+        <div class="right">
+
+            <h1><%= singleBook.bookTitle %></h1>
+
+            <p>
+                <strong>Author :</strong>
+                <%= singleBook.bookAuthor %>
+            </p>
+
+            <p>
+                <strong>Category :</strong>
+                <%= singleBook.bookCategory %>
+            </p>
+
+            <p>
+                <strong>Price :</strong>
+                ₹ <%= singleBook.bookPrice %>
+            </p>
+
+            <p>
+                <strong>Quantity :</strong>
+                <%= singleBook.bookQty %>
+            </p>
+
+            <p>
+                <strong>Description :</strong>
+                <%= singleBook.description %>
+            </p>
+
+            <a href="/" class="back-btn">
+                Back To Home
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

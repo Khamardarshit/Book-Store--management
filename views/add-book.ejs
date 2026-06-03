@@ -1,0 +1,208 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD BOOK PAGE</title>
+</head>
+<body>
+    <h1>ADD BOOK PAGE</h1>
+
+    <form action="/insertData" method="post" enctype="multipart/form-data">
+        <label for="">BOOK TITLE :</label>
+        <input type="text" name="bookTitle" placeholder="Enter Book Title">
+        <br><br>
+        <label for="">AUTHOR NAME :</label>
+        <input type="text" name="bookAuthor" placeholder="Enter Author Name">
+        <br><br>
+        <label for="">CATEGORY :</label>
+        <input type="text" name="bookCategory" placeholder="Enter Book Category">
+        <br><br>
+        <label for="">PRICE :</label>
+        <input type="number" name="bookPrice" placeholder="Enter Book Price">
+        <br><br>
+        <label for="">QUANTITY :</label>
+        <input type="number" name="bookQty" placeholder="Enter Book Price">
+        <br><br>
+        <label for="">DESCRIPTION :</label>
+        <input type="text" name="description" placeholder="Enter Book Description">
+        <br><br>
+        <label for="">COVER IMAGE :</label>
+        <input type="file" name="coverImage" >
+        <br><br>
+
+        <button type="submit">ADD BOOK</button>
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADD BOOK PAGE</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .form-container {
+        width: 650px;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #222;
+      }
+
+      .input-group {
+        margin-bottom: 18px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      input:focus {
+        border-color: #222;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background: #222;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #444;
+      }
+
+      .back-btn {
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+        color: #222;
+        font-weight: bold;
+      }
+      
+      select{ width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; outline: none; background: white; font-size: 15px; transition: 0.3s; cursor: pointer; } select:focus{ border-color: #222; }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>📚 Add New Book</h1>
+
+      <form action="/insertData" method="post" enctype="multipart/form-data">
+        <div class="input-group">
+          <label>Book Title</label>
+          <input
+            type="text"
+            name="bookTitle"
+            placeholder="Enter Book Title"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Author Name</label>
+          <input
+            type="text"
+            name="bookAuthor"
+            placeholder="Enter Author Name"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Category</label>
+          <!-- <input type="text" name="bookCategory" placeholder="Enter Book Category" required> -->
+          <select name="bookCategory" required>
+            <option value="">Select Category</option>
+            <option value="Finance">History</option>
+            <option value="Programming">Novel</option>
+            <option value="Motivation">Biography</option>
+            <option value="Business">Fiction</option>
+            <option value="Story">Classic</option>
+            <option value="Story">Nature</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Price</label>
+          <input
+            type="number"
+            name="bookPrice"
+            placeholder="Enter Book Price"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Quantity</label>
+          <input
+            type="number"
+            name="bookQty"
+            placeholder="Enter Book Quantity"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Description</label>
+          <input
+            type="text"
+            name="description"
+            placeholder="Enter Book Description"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Cover Image</label>
+          <input type="file" name="coverImage" required />
+        </div>
+
+        <button type="submit">Add Book</button>
+      </form>
+
+      <a href="/" class="back-btn"><span style="font-weight: 800;"><</span> Back To Home</a>
+    </div>
+  </body>
+</html>
